@@ -7,7 +7,7 @@
     "build": "vite build",
     "serve": "vite preview",
     "tauri": "tauri",
-    "copy-redis": "sh scripts/copy-redis.sh"
+    "install-redis": "sh scripts/install-redis.sh"
   },
   "license": "MIT",
   "devDependencies": {
