@@ -11,9 +11,6 @@
     "version": "0.1.0"
   },
   "tauri": {
-    "allowlist": {
-      "all": true
-    },
     "bundle": {
       "active": true,
       "category": "DeveloperTool",
@@ -21,7 +18,9 @@
       "deb": {
         "depends": []
       },
-      "externalBin": [],
+      "externalBin": [
+        "bin/redis-server"
+      ],
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
@@ -45,6 +44,21 @@
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
         "timestampUrl": ""
+      }
+    },
+    "allowlist": {
+      "all": false,
+      "dialog": {
+        "all": true
+      },
+      "shell": {
+        "sidecar": true,
+        "scope": [
+          {
+            "name": "bin/redis-server",
+            "sidecar": true
+          }
+        ]
       }
     },
     "security": {
