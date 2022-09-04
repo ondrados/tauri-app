@@ -36,7 +36,8 @@ jobs:
         run: yarn && yarn build
 
       - name: Install redis-server
-        run: sh ./scripts/install-redis.sh ${{ matrix.platform }}
+        shell: bash
+        run: bash ./scripts/install-redis.sh ${{ matrix.platform }}
 
       - name: Build the app
         uses: tauri-apps/tauri-action@v0
